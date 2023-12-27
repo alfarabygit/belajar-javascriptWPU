@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dom Selection</title>
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+      <section id="a">
+        <p class="p1">paragraf 1</p>
+        <a href="http://instagram.com/alfarabyindra">Instagram Alfaraby Indra</a>
+        <p class="p2">paragraf 2</p>
+        <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+        <p>paragraf 4</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- skrip utk dom javacript -->
+    <script>
+      //DOM SELECTION
+      //1. Get Element by Id ->return element
+      // const judul = document.getElementById("judul");
+      // judul.style.color = "aqua";
+      // judul.style.backgroundColor = "crimson";
+      // judul.innerHTML = "Alfaraby Indra";
+
+      //2. Get Elements by Tag Name -> HTMLCollection
+      //const paragraf = document.getElementsByTagName("p");
+
+      // paragraf[0].style.backgroundColor = "lightblue";
+      // paragraf[1].style.backgroundColor = "lightblue";
+      // paragraf[2].style.backgroundColor = "lightblue";
+      // paragraf[3].style.backgroundColor = "lightblue";
+
+      // for (let a = 0; a < paragraf.length; a++) {
+      //   paragraf[a].style.backgroundColor = "lightblue";
+      // }
+
+      // const h1 = document.getElementsByTagName("h1");
+      // h1[0].style.fontSize = "3rem";
+
+      //3. Get Elements by Class Name -> HTMLCollection
+      // const p1 = document.getElementsByClassName("p1");
+      // p1[0].innerHTML = "Manipulasi text dengan DOM Javascript";
+
+      //4. Query Selector/All
+      // const p4 = document.querySelector("#b p");
+      // p4.style.color = "orange";
+      // p4.style.fontSize = "2rem";
+
+      // const list1 = document.querySelector("section#b ul li:nth-child(2)");
+      // list1.style.backgroundColor = "pink";
+
+      // const p2 = document.querySelectorAll("p");
+      // for (let i = 0; i < p2.length; i++) {
+      //   p2[i].style.backgroundColor = "crimson";
+      // }
+
+      //node root
+      const sectionb = document.querySelector("section#b");
+      const p5 = sectionb.getElementsByTagName("p")[0];
+
+      p5.style.backgroundColor = "crimson";
+    </script>
+  </body>
+</html>
